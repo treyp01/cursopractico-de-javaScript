@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{/*variables*/
+            --while:#FFFFFF;
+            --black:#000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green:#ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+             
+        }
+        .body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+       
+        .mobile-menu{
+            padding: 4px; /*es para tener el espacio entre los lados del contenido de menu*/
+
+        }
+        .mobile-menu a{
+            text-decoration: none;/*es para quitarle el subrayado a todos los aconrd*/
+            color: var(--black);  /*le ponemos el color deseado*/
+            font-weight: bold;  /*le ponemos negrilla a todos los acord*/
+           /* margin-bottom: 24px;*//*le ponemos el margen para que este separadas cada una ADICIONAL YA QUE NO NOS VA A FUNCIONAR ESTA LINEA DE CODIGO POR EL TEMA DE INLINE DEBEMOS ORGANIZARLO PARA QUE FUNCIONE EN EL SIGUIENTE CODIGO*/
+            
+        }
+        .mobile-menu ul{
+            padding: 0;/*es para tener el espacio entre los lados del contenido de las listas*/
+            margin: 24px 0 0; /*es para ponerle margenes y no se pegue una con otra por lotanto le ponemos el margen de 24 y 0 a los lados y cero hacia abajo */
+            list-style: none; /*es para quitarle los punticos que salen en cada una de las listas*/
+
+        }
+        .mobile-menu ul:nth-child(1){ /*es para el primer item de la lista lo podamos modificar a nuestro antojo*/
+            border-bottom: 1px solid var(--very-light-pink);/*le ponemos una linea para que mos diferencie de la segunda lista y le agregamos un color solido*/
+
+        }
+
+        .mobile-menu ul li{
+            margin-bottom: 24px;/*para que cada elemeto de li tenga un margen y no se junten*/
+
+        }
+        
+        .email{
+            font-size: var(--sm); /*para el tamaño del listado a tratar*/
+            font-weight: 300 !important;/*le ponemos grosor a la letra y ademas le ponemos important para que no se vaya a poner este tamañp al resto de las lista --tema de especificidad*/
+            
+
+
+        }
+        .sign-out{
+            font-size: var(--sm);
+            color: var(--hospital-green)!important;
+        }
+        .mobile-menu ul:nth-child(3){
+            position: absolute; /*esta funcion lo que hace es coger el 3 de las ul y ponerlo en posicion absolurta t el botton en cero para que quede en la parte de abajo*/
+            bottom:0; 
+        }
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="mobile-menu">
+        <ul>
+            <li>
+                <a href="/">CATEGORIES</a>
+            </li>
+
+            <li>
+                <a href="/">ALL</a>
+            </li>
+
+            <li>
+                <a href="/">Clothes</a>
+            </li>
+
+            <li>
+                <a href="/">Electronics</a>
+            </li>
+
+            <li>
+                <a href="/">Furnitures</a>
+            </li>
+
+            <li>
+                <a href="/">Toys</a>
+            </li>
+
+            <li>
+                <a href="/">Other</a>
+            </li>
+            
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/"class="email">trey@example.com</a>
+            </li>
+            <li>
+                <a href="/"class="sign-out">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

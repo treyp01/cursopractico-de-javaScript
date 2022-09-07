@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{/*variables*/
+            --while:#FFFFFF;
+            --black:#000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green:#ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+             
+        }
+        .body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .desktop-menu{
+           width: 100px;
+           height: auto;
+           border: 1px solid var(--very-light-pink);  //ES PARA PONERLE EL BORDE A TODO EL MENU
+           border-radius: 6px;                   //ES PARA QUE LOS BORDER QUEDEN REDONDEADO
+           padding: 20px 20px 20px;  //        
+        }
+        .desktop-menu{
+            list-style: none;  //ES PARA QUITARLE LA LINEA QUE LLEBA CADA UNA DE LAS LISTAS DEL CONTENEDOR 
+            padding: 0;    //QUITAMOS EL PADDING
+            margin: 0;     //QUITAMOS EL MARGIN 
+        }
+        .desktop-menu ul li:nth-child(1),
+        .desktop-menu ul li:nth-child(2)
+        {
+            text-align: end;  //ES PARA ALINIAR EL CONTENIDO DE DESKTOP MENU EN LA PARTE FINAL
+        }
+    
+        .desktop-menu ul li {
+          font-weight:bold ; // ES PARA QUE QUEDE EN NEGRILLA TODO EL CONTENIDO DE UL Y LI    
+        }
+        .desktop-menu ul li:last-child{
+            padding-top: 20px;  //PARA EL ESPACIO ESTRE LOS ELEMENTOS
+            border-top: 1px solid var(--very-light-pink);  //ESPACIO ENTRE
+
+        }
+        .desktop-menu ul li:last-child a{
+            color: var(--hospital-green);  //para ponerle el color al a
+            font-size: var(--sm) ;            //para el tamaño
+        }
+        .desktop-menu ul li a{
+            color:var(--black);               //le ponemos color al resto
+            text-decoration: none;            //le quitamos el subrayado al texto de las listas
+            margin-bottom: 20px;              //hacemos que tenga margen entre cada una de ellas
+            display: inline-block;            //ya que a los elementos inline como los que estaos trabajando no se le uede poner el magin 20px hacemos que funcione como bloque
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-menu">
+        <ul> 
+            <li>
+                <a href="/"class="title">My orders </a>
+            </li>
+
+            <li>
+                <a href="/">My account </a>
+            </li>   
+            
+            <li>
+                <a href="/">Sign out</a>
+            </li>  
+            
+        </ul>
+</body>
+</html>

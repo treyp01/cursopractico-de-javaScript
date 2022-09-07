@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+    :root{                                              /*variables para usar en todo el codigo*/
+            --while:#FFFFFF;
+            --black:#000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green:#ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        .body{
+            margin: 0;                                         //ponemos la magen de 0
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%;                       // para ponerle el 100% de ancho y alt0
+            height: 100%;
+            display: grid;                     //le agregamos grid para que funcione como fila y columna todos los hijos de login
+            place-items: center;               // para centrar el contenido de login osea todos los item o en pocas palabras hijos de login
+        }
+        .form-container{
+            display:grid ;                      //ponemos todo nuestro contenedor como grid quiere decir que todo lo de adentro va a actuar como fila columna
+            grid-template-rows: auto 1fr auto;  // lo que decimos aqui es que la parte superior del titulo y subtitulo tomen el valor de auto osea el que deceen ademas la parte de pasword que sea de 1fr y la ultima fila sea el espacio que sobre
+            width: 300px;          //aqui decimos que el ancho del form-contenedor sea de 300 para que no acupe toda la pantalla
+        }
+        .logo{
+            width: 150px;            //aumentamos tamaño del logo
+            margin-bottom: 5px;     //hacemos el margen de ceparacion entre el logo y el titulo
+            justify-self: center;   //ponemos el logo en el centro de la pantalla
+            display: none;          //esto se hace para que no aprezca en destok osea en un ordenador de escritorio
+
+
+        }
+        .title{
+            font-size: var(--lg);      //esto es para el tamaño del titulo recordemos que para utilizar las variabeles utilizamos var y adentro del parentecis las variable
+            margin-bottom: 12px;       //esto es para la margen entre el titulo y el subtitulo
+            text-align: center;        //esto es para que el texto se centre 
+        }
+        .subtitle{
+            color: var(--very-light-pink);  //para ponerle color al subtitul
+            font-size: var(--md);           //para el tamaño del subtitulo
+            font-weight: 300;               //
+            margin-top: 0;                  //esto es para que no se cruce con el que tiene los parrafos por defectos osea con el label
+            margin-bottom: 32px;            //esto es para separarlo de los label e input
+            text-align: center;             //ponemos el texto en el centro
+        }
+        .form-{
+
+            display: flex;         //esto es para que los label y cajas input actuen de seguido y no este uno de bajo del otro
+            flex-direction:colum;  //esto es para que quede en forma de coumana
+        }
+        .label{
+            font-size: var(--sm);   //para darle el tamaño a los label
+            font-weight: bold;      //es para darla un grosor bold osea gordo
+            margin-bottom: 4px;     //para darle margen sobre el input
+        }
+        .input {
+            background-color: var(--text-input-field);  //para darle el color predeterimnado por la variable predilecta
+            border: none;                               //para quitarle el borde que tiene por defecto
+            border-radius: 8px;                      //le vamos A POner un border-radius osea vamos a redondear los bordes
+            height: 30px;                             //le ponemos un alto 
+            font-size: var(--md);                    // y un tamaño de mediano
+            padding: 6px;                           // y esto se hace para que no quede tan pegado el pasworl al borde de la caja 
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="login">
+        <div class="form-container">
+            <img class="logo"src=""alt="logo">                                                                       /logo
+
+            <h1 class="title">Create a new pasword</h1>                                                          //titulo
+            <p class="subtitle">Enter a new pasword for your account</p>                                          //subtitulo
+ 
+            <form action="/" class="form">                                                                   //se crea una clase accion con sus label y input para escribir dato requerido 
+                <label for="pasword"class="label">                                          //se crea la clase del label que es solo el texto para darle vida en css mas adelante
+                <font style="vertical-align: inherit;">                                     //este font style es para organizar el label antes de la caja del input
+                    <font style="vertical-align: inherit;">password</font>                      
+                </font>
+                </label>
+                
+                <input type="password" id="password" placeholder="******" class="input input-password">        //se crea la barra input para meter datos ademas del id para vincularlo con el input que es de tipo pasword y ademas el placeholder que es lo que va a tener por fuera para mostrarle al usuario en este caso son *****
+                
+                                                                                
+                
+                <label for="new-pasword"class="label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">password</font>
+                </font>
+                </label>
+               
+                <input type="password" id="new-password" placeholder="******" class="input input-password">
+               
+
+                <input type="submit" value="confirm" class="primary-button login-button">                //se crea el boton para confirmar
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
